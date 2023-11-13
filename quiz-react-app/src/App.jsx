@@ -14,14 +14,22 @@ function App() {
   
     {/* Question answer */}
     <div className='box1'>
-       <h3>Q : </h3>
-    
-    
+       <h3>Q : What is Neon?</h3>
+       <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+       </ul>
     </div>
 
 
     {/* REsult */}
-    <div className='box2'></div>
+    <div className='box2'>
+       <p>You have correct 3 questions out of 5. 20%</p>
+
+       <button>Restart</button>
+    </div>
   
   </div> 
   )
