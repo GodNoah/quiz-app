@@ -1,33 +1,40 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+body{
+  background-color: #b4bdff;
+}
+.heading h1 {
+
+  
+}
 .box1{
   width: 50%;
   height: 300px;
-  background-color: aquamarine;
+  background-color: #83a2ff;
   margin: 0 auto;
-  text-align: center;
-
-  
-  align-items:center;
-
+   
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 .box1 h3 {
-  color: brown;
+  color: #ffe3bb;
   margin-right: 10px;
   padding: 10px;
 }
 ul{
   height: 50%;
-  margin-left: 10px;
   margin-top: 20px;
 }
 ul > li{
   display: flex;
   align-items: center;
- justify-content: center;
+  justify-content: center;
   list-style: none;
   background-color: aliceblue;
   border-radius: 10px;
- 
+  margin-left: 30px ;
   width: 80%;
   height: 25%;
   margin-top: 1rem;

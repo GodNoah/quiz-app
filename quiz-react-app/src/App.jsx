@@ -7,10 +7,11 @@ function App() {
   return (
   <div>
     {/* Heading */}
-    <h1>Quiz App</h1>
-    <h3>QUestion 1 of 5</h3>
-    <p>Current Score</p>
-
+    <div className='heading'>
+      <h1>Quiz App</h1>
+      <h3>QUestion 1 of 5</h3>
+      <p>Current Score</p>
+    </div>
   
     {/* Question answer */}
     <div className='box1'>
