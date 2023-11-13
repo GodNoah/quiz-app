@@ -62,7 +62,14 @@ function App() {
       ]
     }
    ]
+   
+   const clicking = (isCorrect) => {
+    if(isCorrect) {
+      setScore(score + 1)
+    }
 
+    setCurrentQuestion(currentQuestion + 1); 
+   }
 
 
   return (
@@ -81,7 +88,8 @@ function App() {
      
        <ul>
          {questions[currentQuestion].choices.map((choice) => {
-          return <li key={choice.id}>{choice.text}</li>
+          choice.isCorrect ? <li className='correct' key={choice.id}>{choice.text}</li> : 
+          <li className='wrong' key={choice.id}>{choice.text}</li> 
          })}
        </ul>
     </div>
