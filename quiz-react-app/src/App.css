@@ -28,6 +28,11 @@ body{
 ul{
   height: 50%;
   margin-top: 20px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+  
 }
 ul > li{
   display: flex;

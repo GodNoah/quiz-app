@@ -8,7 +8,7 @@ function App() {
 
    const questions = [
     {
-      question: "asfafafsfsa",
+      question: "Which planet is closet to the Sun?",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -17,7 +17,7 @@ function App() {
       ]
     },
     {
-      question: "asfafafsfsa",
+      question: "Which drink is ameican's signature?",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -26,7 +26,7 @@ function App() {
       ]
     },
     {
-      question: "asfafafsfsa",
+      question: "Which ocean has largest area in the world?",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -35,7 +35,7 @@ function App() {
       ]
     },
     {
-      question: "asfafafsfsa",
+      question: "How many Sub-particle are there in atom?",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -44,7 +44,7 @@ function App() {
       ]
     },
     {
-      question: "asfafafsfsa",
+      question: "Who wrote pride and prejudice",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -53,7 +53,7 @@ function App() {
       ]
     },
     {
-      question: "asfafafsfsa",
+      question: "Most handsome human being",
       choices : [
         {id : 1, text: ".....", isCorrect: false},
         {id : 2, text: ".....", isCorrect: false},
@@ -77,7 +77,8 @@ function App() {
     {showResultBox ? (
     /* Question answer */
     <div className='box1'>
-       <h3>Q : What is Neon?</h3>
+    <h3>{questions[currentQuestion].question}</h3>
+     
        <ul>
          {questions[currentQuestion].choices.map((choice) => {
           return <li key={choice.id}>{choice.text}</li>
