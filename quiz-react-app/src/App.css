@@ -92,4 +92,7 @@ button:focus {
   background-color: #16437E;
   color: #ffffff;
 }
-
+img{
+  width: 80px;
+  border-radius: 50%;
+}

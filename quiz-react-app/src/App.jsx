@@ -27,6 +27,7 @@ function App() {
 
     {/* REsult */}
     <div className='box2'>
+       <img src='https://th.bing.com/th/id/OIP.wGpA4CDhP5Dgovs-yFxkNAHaHa?pid=ImgDet&rs=1'></img>
        <p>You have correct 3 questions out of 5. 20%</p>
 
        <button>Restart</button>
