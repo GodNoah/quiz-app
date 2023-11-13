@@ -4,7 +4,7 @@ import './App.css'
 function App() {
    const [showResultBox, setShowResultBox] = useState(true)
    const [score, setScore] = useState(0)
-   const [currentQuestion, setCurrentQuestion] = useState(1)
+   const [currentQuestion, setCurrentQuestion] = useState(0)
 
    const questions = [
     {
@@ -70,7 +70,7 @@ function App() {
     {/* Heading */}
     <div className='heading'>
       <h1>Quiz App</h1>
-      <h3>Question {currentQuestion} of {questions.length}</h3>
+      <h3>Question {currentQuestion + 1} of {questions.length}</h3>
       <p>Current Score : {score} </p>
     </div>
     
@@ -79,10 +79,9 @@ function App() {
     <div className='box1'>
        <h3>Q : What is Neon?</h3>
        <ul>
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
-          <li>D</li>
+         {questions[currentQuestion].choices.map((choice) => {
+          return <li key={choice.id}>{choice.text}</li>
+         })}
        </ul>
     </div>
     ) : (
