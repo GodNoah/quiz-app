@@ -3,14 +3,75 @@ import './App.css'
 
 function App() {
    const [showResultBox, setShowResultBox] = useState(true)
+   const [score, setScore] = useState(0)
+   const [currentQuestion, setCurrentQuestion] = useState(1)
+
+   const questions = [
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    },
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    },
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    },
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    },
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    },
+    {
+      question: "asfafafsfsa",
+      choices : [
+        {id : 1, text: ".....", isCorrect: false},
+        {id : 2, text: ".....", isCorrect: false},
+        {id : 3, text: ".....", isCorrect: false},
+        {id : 4, text: ".....", isCorrect: false}
+      ]
+    }
+   ]
+
+
 
   return (
   <div>
     {/* Heading */}
     <div className='heading'>
       <h1>Quiz App</h1>
-      <h3>Question 1 of 5</h3>
-      <p>Current Score : </p>
+      <h3>Question {currentQuestion} of {questions.length}</h3>
+      <p>Current Score : {score} </p>
     </div>
     
     {showResultBox ? (
