@@ -9,8 +9,8 @@ function App() {
     {/* Heading */}
     <div className='heading'>
       <h1>Quiz App</h1>
-      <h3>QUestion 1 of 5</h3>
-      <p>Current Score</p>
+      <h3>Question 1 of 5</h3>
+      <p>Current Score : </p>
     </div>
   
     {/* Question answer */}
@@ -21,7 +21,6 @@ function App() {
           <li>B</li>
           <li>C</li>
           <li>D</li>
-         
        </ul>
     </div>
 

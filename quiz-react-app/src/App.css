@@ -6,10 +6,10 @@ body{
   background-color: #d6e4e5;
 }
 .heading h1 {
-  color: #497174;
-
-
-  
+  color: #497174;  
+}
+.heading h3 , .heading p{
+  color: #164863;
 }
 .box1{
   width: 50%;
@@ -40,6 +40,6 @@ ul > li{
   width: 80%;
   height: 25%;
   margin-top: 1rem;
-  color: #b0a695; 
+  color: #427d9d; 
 
 }
