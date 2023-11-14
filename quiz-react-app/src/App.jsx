@@ -10,26 +10,26 @@ function App() {
     {
       question: "Which planet is closet to the Sun?",
       choices : [
+        {id : 4, text: "Mercury", isCorrect: true},
         {id : 1, text: "Earth", isCorrect: false},
         {id : 2, text: "Uranes", isCorrect: false},
         {id : 3, text: "Venus", isCorrect: false},
-        {id : 4, text: "Mercury", isCorrect: false}
       ]
     },
     {
       question: "Which drink is ameican's signature?",
       choices : [
         {id : 1, text: "StarBuck", isCorrect: false},
-        {id : 2, text: "Coca-cola", isCorrect: false},
         {id : 3, text: "Whiskey", isCorrect: false},
-        {id : 4, text: "Beer", isCorrect: false}
+        {id : 4, text: "Beer", isCorrect: false},
+        {id : 2, text: "Coca-cola", isCorrect: true},
       ]
     },
     {
-      question: "Which ocean has largest area in the world?",
+      question: "Which ocean has greatest area in the world?",
       choices : [
         {id : 1, text: "Atlantic", isCorrect: false},
-        {id : 2, text: "Pacific", isCorrect: false},
+        {id : 2, text: "Pacific", isCorrect: true},
         {id : 3, text: "Arctic", isCorrect: false},
         {id : 4, text: "Indian", isCorrect: false}
       ]
@@ -39,7 +39,7 @@ function App() {
       choices : [
         {id : 1, text: "one", isCorrect: false},
         {id : 2, text: "two", isCorrect: false},
-        {id : 3, text: "three", isCorrect: false},
+        {id : 3, text: "three", isCorrect: true},
         {id : 4, text: "four", isCorrect: false}
       ]
     },
@@ -47,24 +47,38 @@ function App() {
       question: "Who wrote pride and prejudice",
       choices : [
         {id : 1, text: "Charles Dickens", isCorrect: false},
-        {id : 2, text: "Jane Austin", isCorrect: false},
+        {id : 2, text: "Jane Austin", isCorrect: true},
         {id : 3, text: "Shakespeare", isCorrect: false},
         {id : 4, text: "Hemingway", isCorrect: false}
       ]
     },
     {
-      question: "Most handsome human being",
+      question: "Energy can neither be created nor destoryed",
       choices : [
-        {id : 1, text: "", isCorrect: false},
-        {id : 2, text: ".....", isCorrect: false},
-        {id : 3, text: ".....", isCorrect: false},
-        {id : 4, text: ".....", isCorrect: false}
+        {id : 1, text: "Newton Second Law", isCorrect: true},
+        {id : 2, text: "Conservation of Energy", isCorrect: false},
+        {id : 3, text: "Geneeal Relativity", isCorrect: false},
+        {id : 4, text: "Gravitational Law", isCorrect: false}
       ]
     }
    ]
+   const cliker=  ({isCorrect}) => {
+    const border = isCorrect ? 'green' : 'red'; 
+    if(isCorrect) { 
+      setScore(score + 1)
+    }
+    (currentQuestion + 1 < questions.length) ? setCurrentQuestion(currentQuestion + 1)  : setShowResultBox(false) 
+    
+   }
 
 
 
+   const restartQuiz = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setShowResultBox(true);
+};
+  const border = showResultBox ? '' : '1px solid transparent';
   return (
   <div>
     {/* Heading */}
@@ -81,18 +95,18 @@ function App() {
      
        <ul>
          {questions[currentQuestion].choices.map((choice) => {
-          return <li key={choice.id}>{choice.text}</li>
+          return <li onClick={() => cliker(choice.isCorrect)} style={{ border: `1px solid ${border}` }} key={choice.id}>
+  {choice.text}</li>
          })}
        </ul>
     </div>
     ) : (
-
     /* REsult */
     <div className='box2'>
        <img src='https://th.bing.com/th/id/OIP.wGpA4CDhP5Dgovs-yFxkNAHaHa?pid=ImgDet&rs=1'></img>
-       <p>You have correct 3 questions out of 5. 20%</p>
+       <p>You beat {score} out of {questions.length} - ({((score / questions.length) * 100).toFixed(2)})%</p>
 
-       <button>Restart</button>
+       <button onClick={() => restartQuiz()}>Restart</button>
     </div>
     )
   }
