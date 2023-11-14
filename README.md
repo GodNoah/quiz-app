@@ -3,7 +3,6 @@
 
 
  ----- 
- * JSx and Styling 
- * Use array for answers 
- * when we choose the answer the answer must show correct or wrong. 
- * if correct + 1 out of questions 
+ * done with functions 
+ * To modified by adding more access  
+ * I want to put boder style change 
